@@ -34,7 +34,7 @@ export default function CabinTable() {
     data: cabins,
     error,
   } = useQuery({
-    queryKey: ["cabin"],
+    queryKey: ["cabins"],
     queryFn: getCabins,
   });
 
@@ -48,8 +48,6 @@ export default function CabinTable() {
         <div>Capacity</div>
         <div>Price</div>
         <div>Discount</div>
-        <div></div>
-        <div></div>
       </TableHeader>
       {cabins.map((cabin) => (
         <CabinRow cabin={cabin} key={cabin.id} />
